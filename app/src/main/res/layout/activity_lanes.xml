@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_200"
+    android:orientation="vertical"
+    tools:context=".Logic.GameManager"
+    android:layoutDirection="ltr">
+
+    <LinearLayout
+        android:layout_width="340dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="16dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_heart1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:layout_marginHorizontal="10dp"
+            android:src="@drawable/ic_icon_heart">
+
+        </com.google.android.material.imageview.ShapeableImageView>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_heart2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:layout_marginHorizontal="10dp"
+            android:src="@drawable/ic_icon_heart">
+
+        </com.google.android.material.imageview.ShapeableImageView>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_heart3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:layout_marginHorizontal="10dp"
+            android:src="@drawable/ic_icon_heart">
+
+        </com.google.android.material.imageview.ShapeableImageView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:layout_above="@id/main_BTN_arrows"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+    <LinearLayout
+        android:id="@+id/main_IMG_lanes1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/main_IMG_lane_1_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/rock"
+            android:visibility="invisible">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/main_IMG_lane_1_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/rock"
+            android:visibility="invisible">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/main_IMG_lane_1_3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/rock"
+            android:visibility="invisible">
+
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/main_IMG_lane_1_4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/rock"
+            android:visibility="invisible">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/main_IMG_lane_1_5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/rock"
+            android:visibility="invisible">
+
+
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/main_IMG_lane_1_6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/car_topview"
+            android:visibility="invisible">
+
+        </ImageView>
+
+
+
+
+
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/main_IMG_lanes2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/main_IMG_lane_2_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="invisible">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/main_IMG_lane_2_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="invisible">
+
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/main_IMG_lane_2_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="invisible">
+
+
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/main_IMG_lane_2_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="invisible">
+
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/main_IMG_lane_2_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="invisible">
+
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/main_IMG_lane_2_6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/car_topview">
+
+            </ImageView>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/main_IMG_lanes3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/main_IMG_lane_3_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/rock"
+            android:visibility="invisible">
+
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/main_IMG_lane_3_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/rock"
+            android:visibility="invisible">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/main_IMG_lane_3_3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/rock"
+            android:visibility="invisible">
+
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/main_IMG_lane_3_4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/rock"
+            android:visibility="invisible">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/main_IMG_lane_3_5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/rock"
+            android:visibility="invisible">
+
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/main_IMG_lane_3_6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/car_topview"
+            android:visibility="invisible">
+
+        </ImageView>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/main_BTN_arrows"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="32dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/main_BTN_left_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/baseline_arrow_left_24"
+            android:backgroundTint="@color/red_200">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        <View
+            android:layout_width="260dp"
+            android:layout_height="50dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/main_BTN_right_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/baseline_arrow_right_26"
+            android:backgroundTint="@color/red_200">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    </LinearLayout>
+
+
+
+
+
+
+</RelativeLayout>
