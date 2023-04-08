@@ -18,7 +18,7 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    public final int DELAY = 1000;
+    public final int DELAY = 500;
 
     private ShapeableImageView[] main_IMG_hearts;
     private ImageView[] main_IMG_lane_1;
@@ -57,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
         int i;
         if(lane[lane.length-2].getVisibility() == View.VISIBLE){
             lane[lane.length-2].setVisibility(View.INVISIBLE);
-            areViewOverLapping();
             lastStoneLane = 0;
         }
         for(i=0;i<lane.length-2;i++)
@@ -66,9 +65,10 @@ public class MainActivity extends AppCompatActivity {
                 lane[i].setVisibility(View.INVISIBLE);
                 i++;
                 lane[i].setVisibility(View.VISIBLE);
-                if(i==lane.length-2)
+                if(i==lane.length-2){
                     lastStoneLane = laneNumber;
-            }}
+                    areViewOverLapping();
+                }}}
     }
 
     private void createNewObstacle(){
@@ -158,14 +158,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private boolean areViewOverLapping(){
+    private void areViewOverLapping(){
             if(lastStoneLane == carLane) {
                 Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                 gameManager.isCrashed(getApplicationContext() ,v, toast);
                 refreshUI();
-                return true;
+                lastStoneLane = 0;
             }
-            return false;
     }
 
     private void findViews() {
