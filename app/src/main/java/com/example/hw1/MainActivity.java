@@ -6,6 +6,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Vibrator;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -98,16 +99,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lanes);
-
         findViews();
-        start();
         gameManager = new GameManager(main_IMG_hearts.length);
 
         moveCarClickListeners();
     }
 
-    private void start() {
-        handler1.postDelayed(runnable,DELAY);
+    protected void onStart() {
+        super.onStart();
+        handler1.postDelayed(runnable, DELAY);
     }
 
     private void moveCarClickListeners() {
@@ -150,12 +150,27 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    protected void onPause () {
+        super.onPause();
+        handler1.removeCallbacks(runnable);
+        if (toast != null) {
+            toast.cancel();
+        }
+    }
     protected void onStop () {
         super.onStop();
         handler1.removeCallbacks(runnable);
         if (toast != null) {
             toast.cancel();
         }
+    }
+
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    protected void onRestart() {
+        super.onRestart();
     }
 
     private void areViewOverLapping(){
