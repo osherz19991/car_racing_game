@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue_200"
+    android:background="@drawable/roads"
     android:orientation="vertical"
     tools:context=".Logic.GameManager"
     android:layoutDirection="ltr">
@@ -49,13 +49,24 @@
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/main_TXT_odometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 km"
+        android:textSize="20sp"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="30dp">
+
+    </TextView>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="60dp"
         android:layout_above="@id/main_BTN_arrows"
         android:orientation="horizontal"
-        android:weightSum="3">
+        android:weightSum="5">
 
     <LinearLayout
         android:id="@+id/main_IMG_lanes1"
@@ -122,11 +133,40 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/car_topview"
+            android:src="@drawable/rock"
             android:visibility="invisible">
 
         </ImageView>
 
+        <ImageView
+            android:id="@+id/main_IMG_lane_1_7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/rock"
+            android:visibility="invisible">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/main_IMG_lane_1_8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/rock"
+            android:visibility="invisible">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/main_IMG_lane_1_9"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/car_topview"
+            android:visibility="invisible">
+
+        </ImageView>
 
 
 
@@ -201,14 +241,40 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:src="@drawable/car_topview">
+                android:src="@drawable/rock"
+                android:visibility="invisible">
 
             </ImageView>
 
+            <ImageView
+                android:id="@+id/main_IMG_lane_2_7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="invisible">
 
+            </ImageView>
 
+            <ImageView
+                android:id="@+id/main_IMG_lane_2_8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="invisible">
 
+            </ImageView>
 
+            <ImageView
+                android:id="@+id/main_IMG_lane_2_9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/car_topview"
+                android:visibility="invisible">
+
+            </ImageView>
 
         </LinearLayout>
 
@@ -280,13 +346,253 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/car_topview"
+            android:src="@drawable/rock"
             android:visibility="invisible">
 
         </ImageView>
 
+        <ImageView
+            android:id="@+id/main_IMG_lane_3_7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/rock"
+            android:visibility="invisible">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/main_IMG_lane_3_8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/rock"
+            android:visibility="invisible">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/main_IMG_lane_3_9"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/car_topview">
+
+        </ImageView>
 
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/main_IMG_lanes4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/main_IMG_lane_4_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="invisible">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/main_IMG_lane_4_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="invisible">
+
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/main_IMG_lane_4_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="invisible">
+
+
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/main_IMG_lane_4_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="invisible">
+
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/main_IMG_lane_4_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="invisible">
+
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/main_IMG_lane_4_6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="invisible">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/main_IMG_lane_4_7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="invisible">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/main_IMG_lane_4_8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="invisible">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/main_IMG_lane_4_9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/car_topview"
+                android:visibility="invisible">
+
+            </ImageView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/main_IMG_lanes5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/main_IMG_lane_5_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="invisible">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/main_IMG_lane_5_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="invisible">
+
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/main_IMG_lane_5_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="invisible">
+
+
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/main_IMG_lane_5_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="invisible">
+
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/main_IMG_lane_5_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="invisible">
+
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/main_IMG_lane_5_6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="invisible">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/main_IMG_lane_5_7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="invisible">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/main_IMG_lane_5_8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/rock"
+                android:visibility="invisible">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/main_IMG_lane_5_9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/car_topview"
+                android:visibility="invisible">
+
+            </ImageView>
+
+
+        </LinearLayout>
+
+
     </LinearLayout>
 
 
