@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_200"
+    android:orientation="vertical"
+    tools:context=".MenuActivity">
+
+    <TextView
+        android:id="@+id/main_TXT_title"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Car Racing Game"
+        android:gravity="center"
+        android:textSize="50sp"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="50dp">
+    </TextView>
+
+    <RelativeLayout
+        android:id="@+id/main_LAYOUT_buttons1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:layout_below="@id/main_TXT_title">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/main_BTN_option1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="play with buttom"
+        android:layout_centerHorizontal="true"
+        android:textSize="25sp"
+        android:layout_marginStart="35dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/main_BTN_option2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/main_BTN_option1"
+        android:text="play with sensors"
+        android:layout_centerHorizontal="true"
+        android:textSize="25sp"
+        android:layout_marginStart="35dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/main_BTN_option3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/main_BTN_option2"
+        android:text="leaderboards"
+        android:layout_centerHorizontal="true"
+        android:textSize="25sp"
+        android:layout_marginStart="35dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
