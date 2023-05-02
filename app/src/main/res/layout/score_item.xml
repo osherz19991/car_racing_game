@@ -6,20 +6,12 @@
     android:padding="16dp">
 
     <TextView
-        android:id="@+id/record_LBL_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:layout_marginStart="120dp"
-        android:text="Player Name"/>
-
-    <TextView
         android:id="@+id/record_LBL_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="16sp"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="150dp"
+        android:layout_gravity="center"
         android:text="Player Score"/>
 
 </LinearLayout>

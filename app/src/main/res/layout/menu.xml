@@ -28,17 +28,38 @@
         android:orientation="vertical"
         android:layout_below="@id/main_TXT_title">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/main_BTN_option1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="play with buttom"
-        android:layout_centerHorizontal="true"
-        android:textSize="25sp"
-        android:layout_marginStart="35dp"/>
+        <LinearLayout
+            android:id="@+id/main_BTN_option1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            >
 
-    <com.google.android.material.button.MaterialButton
+                  <com.google.android.material.button.MaterialButton
+                  android:id="@+id/main_BTN_slow"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:text="buttom - slow"
+                  android:layout_centerHorizontal="true"
+                  android:textSize="25sp"
+                  android:layout_marginStart="65dp"/>
+
+                  <com.google.android.material.button.MaterialButton
+                  android:id="@+id/main_BTN_fast"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:text="buttom - fast "
+                  android:layout_centerHorizontal="true"
+                  android:textSize="25sp"
+                      android:layout_marginTop="30dp"
+                  android:layout_marginStart="65dp"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
         android:id="@+id/main_BTN_option2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

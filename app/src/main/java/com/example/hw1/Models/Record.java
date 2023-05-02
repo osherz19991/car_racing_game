@@ -2,22 +2,16 @@ package com.example.hw1.Models;
 
 public class Record {
 
-    private String name;
     private double score;
     private double longitude;
     private double latitude;
 
 
-    public Record(String name, double score, double latitude, double longitude) {
-        this.name = name;
+    public Record(double score, double latitude, double longitude) {
         this.score = score;
         this.latitude = latitude;
         this.longitude= longitude;
     }
-
-    public String getName() { return name; }
-
-    public void setName(String name) { this.name = name; }
 
     public void setScore(double score) {
         this.score = score;

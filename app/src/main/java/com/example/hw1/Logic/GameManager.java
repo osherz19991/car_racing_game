@@ -50,7 +50,7 @@ public class GameManager  {
 
     public int newObstacle(){
         int new_lane = random.nextInt(5);
-        return new_lane;
+        return new_lane+1;
     }
 
     public boolean isCoin(){

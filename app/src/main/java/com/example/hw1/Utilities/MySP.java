@@ -3,25 +3,24 @@ package com.example.hw1.Utilities;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.example.hw1.DataManager;
-
-public class MySPv3 {
+public class MySP {
 
     private static final String DB_FILE = "DB_FILE";
-    private static MySPv3 instance = null;
+    private static MySP instance = null;
     private SharedPreferences sharedPreferences;
 
-    private MySPv3(Context context) {
+    private MySP(Context context) {
         sharedPreferences = context.getSharedPreferences(DB_FILE, Context.MODE_PRIVATE);
     }
 
     public static void init(Context context){
         if (instance == null){
-            instance = new MySPv3(context);
+            instance = new MySP(context);
+            instance.sharedPreferences.edit().clear().apply();
         }
     }
 
-    public static MySPv3 getInstance() {
+    public static MySP getInstance() {
         return instance;
     }
 
