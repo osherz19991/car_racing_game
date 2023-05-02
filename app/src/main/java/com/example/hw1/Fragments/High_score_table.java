@@ -3,6 +3,7 @@ package com.example.hw1.Fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,6 +28,7 @@ public class High_score_table extends Fragment {
     private CallBack_SendClick callBack_SendClick;
 
 
+
     public void setCallBack(CallBack_SendClick callBack_SendClick) {
         this.callBack_SendClick = callBack_SendClick;
     }
@@ -47,15 +49,35 @@ public class High_score_table extends Fragment {
 
     private void initView() {
         RecordAdapter recordAdapter = new RecordAdapter(DataManager.getRecords());
+        recordAdapter.setOnItemClickListener(new RecordAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(Record record) {
+                    zoomOnUserLocation(record.getLatitude(), record.getLongitude());
+                Log.d("RecordAdapter", "Clicked on record with name: " + record.getName());
+
+            }
+        });
         score_LST_records.setAdapter(recordAdapter);
         score_LST_records.setLayoutManager(new LinearLayoutManager(getActivity()));
     }
 
-    public void addRecord(int score){
-        DataManager.addRecord(score);
+    private void zoomOnUserLocation(double latitude, double longitude) {
+        if(callBack_SendClick != null){
+            callBack_SendClick.userNameChosen(latitude,longitude);
+            Log.d("555555","111");
+        }
+    }
+
+    public void addRecord(int score,double latitude,double longitude){
+        DataManager.addRecord(score,latitude,longitude);
     }
 
 
-
-
+    public void updateLocation(double latitude, double longitude) {
+        int lastIndex = DataManager.records.size() - 1;
+        Record lastRecord = DataManager.records.get(lastIndex);
+        lastRecord.setLatitude(latitude);
+        lastRecord.setLongitude(longitude);
+        DataManager.records.set(lastIndex,lastRecord);
+    }
 }

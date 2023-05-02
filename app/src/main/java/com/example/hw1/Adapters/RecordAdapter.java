@@ -15,11 +15,12 @@ import java.util.ArrayList;
 import java.util.PrimitiveIterator;
 
 public class RecordAdapter extends RecyclerView.Adapter<RecordAdapter.RecordViewHolder> {
-
-
     private ArrayList<Record> records;
 
+    private OnItemClickListener listener;
     public RecordAdapter(ArrayList<Record> records){ this.records = records; }
+
+
 
 
     @NonNull
@@ -36,6 +37,14 @@ public class RecordAdapter extends RecyclerView.Adapter<RecordAdapter.RecordView
         holder.record_LBL_name.setText(record.getName());
         holder.record_LBL_score.setText(record.getScore() + "");
     }
+    public interface OnItemClickListener {
+        void onItemClick(Record record);
+    }
+
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.listener = listener;
+    }
 
     private Record getItem(int position){
         return this.records.get(position);
@@ -46,7 +55,7 @@ public class RecordAdapter extends RecyclerView.Adapter<RecordAdapter.RecordView
         return this.records == null ? 0 : this.records.size();
     }
 
-    public class RecordViewHolder extends  RecyclerView.ViewHolder{
+    public class RecordViewHolder extends  RecyclerView.ViewHolder implements View.OnClickListener {
         private TextView record_LBL_name;
         private TextView record_LBL_score;
 
@@ -54,6 +63,17 @@ public class RecordAdapter extends RecyclerView.Adapter<RecordAdapter.RecordView
             super(itemView);
             record_LBL_name = itemView.findViewById(R.id.record_LBL_name);
             record_LBL_score = itemView.findViewById(R.id.record_LBL_score);
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            if (listener != null) {
+                int position = getAdapterPosition();
+                if (position != RecyclerView.NO_POSITION) {
+                    listener.onItemClick(records.get(position));
+                }
+            }
         }
     }
 }

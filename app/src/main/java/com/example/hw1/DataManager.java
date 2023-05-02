@@ -19,9 +19,9 @@ public class DataManager {
     public static ArrayList<Record> records = new ArrayList<>();
 
 
-    public static void addRecord(int score) {
-        Record record = new Record("osher",score,15, 15);
-        Log.d("one",score+"");
+    public static void addRecord(int score,double latitude,double longitude) {
+        Record record = new Record("osher",score,latitude, longitude);
+        Log.d("one",score+"  " + latitude + " " + longitude );
         records.add(record);
         Collections.sort(records, ((r1, r2) -> (int) (r2.getScore() - r1.getScore())));
         if (records.size() > MAX_RECORDS) {

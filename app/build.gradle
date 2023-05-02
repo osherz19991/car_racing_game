@@ -43,4 +43,8 @@ dependencies {
 
     //Prefy
     implementation 'com.github.paz-lavi:Prefy:1.0.4'
+
+    //google maps
+    implementation 'com.google.android.gms:play-services-maps:18.0.1'
+
 }
