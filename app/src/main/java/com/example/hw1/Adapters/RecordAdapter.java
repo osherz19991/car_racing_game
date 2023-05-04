@@ -43,6 +43,14 @@ public class RecordAdapter extends RecyclerView.Adapter<RecordAdapter.RecordView
     public void setOnItemClickListener(OnItemClickListener listener) {
         this.listener = listener;
     }
+    public interface OnItemClickListener {
+        void onItemClick(Record record);
+    }
+
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.listener = listener;
+    }
 
     private Record getItem(int position){
         return this.records.get(position);
