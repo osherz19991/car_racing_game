@@ -86,7 +86,7 @@ public class LeaderboardsActivity extends AppCompatActivity {
 
     CallBack_SendClick callBack_SendClick = new CallBack_SendClick() {
         @Override
-        public void userNameChosen(double latitude, double longitude) {
+        public void userLocation(double latitude, double longitude) {
             showUserLocation(latitude,longitude);
         }
     };

@@ -1,13 +1,10 @@
 package com.example.hw1.Fragments;
 
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -16,11 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.hw1.Adapters.RecordAdapter;
 import com.example.hw1.DataManager;
 import com.example.hw1.Interfaces.CallBack_SendClick;
-import com.example.hw1.MenuActivity;
 import com.example.hw1.Models.Record;
 import com.example.hw1.R;
-
-import java.util.ArrayList;
 
 
 public class High_score_table extends Fragment {
@@ -61,7 +55,7 @@ public class High_score_table extends Fragment {
 
     private void zoomOnUserLocation(double latitude, double longitude) {
         if(callBack_SendClick != null){
-            callBack_SendClick.userNameChosen(latitude,longitude);
+            callBack_SendClick.userLocation(latitude,longitude);
         }
     }
 

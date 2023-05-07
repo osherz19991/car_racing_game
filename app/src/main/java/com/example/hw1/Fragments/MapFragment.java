@@ -1,8 +1,5 @@
 package com.example.hw1.Fragments;
 
-
-
-
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
