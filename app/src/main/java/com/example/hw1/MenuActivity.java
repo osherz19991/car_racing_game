@@ -1,6 +1,5 @@
 package com.example.hw1;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -8,7 +7,6 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -49,7 +47,6 @@ public class MenuActivity extends AppCompatActivity {
             // Request location permissions
             ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION, android.Manifest.permission.ACCESS_COARSE_LOCATION}, MY_PERMISSIONS_REQUEST_LOCATION);
         }
-        Log.d("locccc",latitude + " " +  longitude);
     }
 
 
@@ -171,7 +168,6 @@ public class MenuActivity extends AppCompatActivity {
         racingGame.putExtra("speed", speed);
         racingGame.putExtra("latitude", this.latitude);
         racingGame.putExtra("longitude", this.longitude);
-        Log.d("loccc88:", this.latitude + " " +this.longitude);
 
         startActivity(racingGame);
         finish();

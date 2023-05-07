@@ -167,7 +167,12 @@ public class MainActivity extends AppCompatActivity  {
             }
             @Override
             public void stepY() {
-
+                if (carSensor.getStepUp() == 1 && DELAY > 250) {
+                    DELAY -= 250;
+                } else if (carSensor.getStepDown() == 1 && DELAY < 1250) {
+                    DELAY += 250;;
+                }
+                Log.d("Delay","delay :" + DELAY);
             }
             @Override
             public void stepZ() {

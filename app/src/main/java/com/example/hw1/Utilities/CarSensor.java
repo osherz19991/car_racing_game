@@ -13,11 +13,10 @@ public class CarSensor {
     private SensorManager sensorManager;
 
     private StepCallback stepCallback;
-    private float currentX, currentY, currentZ;
     private float startX, startY, startZ;
     private long timestamp = 0;
 
-    private int stepRight = 1, stepLeft = 0, stepCounterY = 0, stepCounterX =0;
+    private int stepRight = 1, stepLeft = 0, stepCounterY = 0, stepCounterX =0,stepUp = 1, stepDown = 0;
 
 
     private SensorEventListener sensorEventListener;
@@ -57,33 +56,35 @@ public class CarSensor {
     private void calculateStep(float x, float y) {
         if (System.currentTimeMillis() - timestamp > 500) {
             timestamp = System.currentTimeMillis();
-            if (x - startX < -1.5) {
+            if (x - startX < -1.0) {
                 stepRight = 1;
                 stepLeft = 0;
                 stepCallback.stepX();
             }
-            if (x - startX > 1.5) {
+            if (x - startX > 1.0) {
                 stepRight = 0;
                 stepLeft = 1;
                 stepCallback.stepX();
             }
-            if (y - startY > 4.0) {
-                stepCounterY++;
-                stepCallback.stepZ();
+            if (y - startY < - 2.0) {
+                stepUp = 1;
+                stepDown = 0;
+                stepCallback.stepY();
             }
-            if (startY - y > 4.0) {
-                stepCounterY++;
-                stepCallback.stepZ();
+            if (y - startY > 2.0) {
+                stepUp = 0;
+                stepDown = 1;
+                stepCallback.stepY();
             }
         }
     }
 
-    public int getStepsY() {
-        return this.stepCounterY;
+    public int getStepUp() {
+        return this.stepUp;
     }
 
-    public int getStepsX() {
-        return this.stepCounterX;
+    public int getStepDown() {
+        return this.stepDown;
     }
 
     public int getStepRight() {

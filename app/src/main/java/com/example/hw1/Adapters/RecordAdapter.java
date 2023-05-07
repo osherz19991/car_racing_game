@@ -35,10 +35,6 @@ public class RecordAdapter extends RecyclerView.Adapter<RecordAdapter.RecordView
         Record record = getItem(position);
         holder.record_LBL_score.setText("score:" + record.getScore());
     }
-    public interface OnItemClickListener {
-        void onItemClick(Record record);
-    }
-
 
     public void setOnItemClickListener(OnItemClickListener listener) {
         this.listener = listener;
@@ -48,9 +44,6 @@ public class RecordAdapter extends RecyclerView.Adapter<RecordAdapter.RecordView
     }
 
 
-    public void setOnItemClickListener(OnItemClickListener listener) {
-        this.listener = listener;
-    }
 
     private Record getItem(int position){
         return this.records.get(position);
@@ -62,7 +55,6 @@ public class RecordAdapter extends RecyclerView.Adapter<RecordAdapter.RecordView
     }
 
     public class RecordViewHolder extends  RecyclerView.ViewHolder implements View.OnClickListener {
-        private TextView record_LBL_name;
         private TextView record_LBL_score;
 
         public RecordViewHolder(@NonNull View itemView) {
