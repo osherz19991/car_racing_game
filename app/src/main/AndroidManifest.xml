@@ -27,10 +27,12 @@
             android:value="Enter the API_KEY HERE"/>
         <activity
             android:name=".LeaderboardsActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
 
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
 
         <activity
