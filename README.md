@@ -13,5 +13,5 @@ Speed - when you tilt the phone back and forth the speed of the car increase and
 
 Leaderboards: 
 
-in leaderBoards you get the top 10 scores and when you press them it show where you did them in the map but if the location is'nt enabled in the phone the  
-latitude and longitiude will be 0.
+in leaderBoards you get the top 10 scores and when you press them it show where you did them in the map but 
+if the location is'nt enabled in the phone the latitude and longitiude will be 0.
